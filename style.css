@@ -12,43 +12,150 @@ body {
     text-align: center;
 }
 
+
+.circles-container {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+
 .circle-box {
-    width: 350px;
-    height: 350px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
-    background-color: rgba(247, 113, 189, 0.6); 
+    background-color: rgba(211, 111, 170, 0.6);
     display: flex;
     justify-content: center;
     align-items: center;
-    backdrop-filter: blur(8px); 
+    backdrop-filter: blur(8px);
     box-shadow: 
         0 4px 15px rgba(0, 0, 0, 0.15), 
-        inset 0 0 20px rgba(255, 251, 240, 0.7); 
-    transition: all 0.3s ease; 
+        inset 0 0 20px rgba(255, 251, 240, 0.7);
+    transition: all 0.3s ease;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+.circle-box:not(.progress-circle):not(.todo-circle) {
+    width: 350px;
+    height: 350px;
+}
+
+
+.progress-circle {
+    background-color: rgba(211, 111, 170, 0.6);
+}
+
+
+.todo-circle {
+    background-color: rgba(211, 111, 170, 0.6);
+}
+
+
+.time-text {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 0; 
+}
+
+.date-text {
+    font-size: 1.2rem;
+    color:black;
+}
+
+
+.progress-bar {
+    width: 80%;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    margin: 15px auto;
+}
+
+.progress-bar::after {
+    content: "";
+    display: block;
+    width: 75%;
+    height: 100%;
+    background: white;
+    border-radius: 10px;
 }
 
 
 .circle-box:hover {
-    background-color: rgba(230, 149, 189, 0.8); 
+    background-color: rgba(230, 149, 189, 0.8);
     box-shadow: 0 6px 25px rgba(243, 172, 204, 0.2);
+    transform: translateY(-2px);
 }
 
-.time-date-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
+a.circle-box {
+    text-decoration: none; 
+    display: flex; 
+    color: inherit; 
 }
 
-.time-text {
-    font-size: 4rem;
-    font-weight: bold;
-    color: rgb(239, 230, 237);
+
+a.circle-box:hover {
+    background-color: rgba(230, 149, 189, 0.8);
+    box-shadow: 0 6px 25px rgba(243, 172, 204, 0.2);
+    transform: translateY(-2px);
 }
 
-.date-text {
-    font-size: 1.5rem;
-    color: rgb(245, 231, 241);
+.weather-widget {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: black;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  backdrop-filter: blur(8px);
+  padding: 8px 15px;
+  border-radius: 30px;
+  background: rgba(211, 111, 170, 0.6);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
+
+.weather-widget:hover {
+
+    background-color: rgba(237, 171, 204, 0.8);
+    box-shadow: 0 6px 25px rgba(243, 172, 204, 0.2);
+    transform: translateY(-2px);
+}
+.weather-icon {
+  font-size: 1.3rem;
+}
+
+.chrome-widget {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: black;
+  text-decoration: none;
+  font-size: 0.9rem;
+  backdrop-filter: blur(8px);
+  background: rgba(237, 171, 204, 0.8);
+  padding: 8px 15px;
+  border-radius: 30px;
+  transition: all 0.3s;
+}
+
+.chrome-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.chrome-widget:hover {
+  background: rgba(237, 171, 204, 0.8);
+  transform: translateY(-2px);
+}
+
+
 
