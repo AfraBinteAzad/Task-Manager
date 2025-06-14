@@ -3,15 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task Manager</title>
+    <title>To-Do List</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="circles-container">
-    <div class="circle-box">
-        
+    <div class="circles-container single-circle">
+        <div class="circle-box todo-circle-full">
+            <div class="todo-content">
+                <h2 class="time-text">To-Do List</h2>
+                <div class="time-date">
+                    <div class="time-text" id="currentTime"></div>
+                    <div class="date-text" id="currentDate"></div>
+                </div>
+                
+                <ul class="task-list" id="taskList">
+                    
+                </ul>
+                
+                <div class="add-task">
+                    <input type="text" id="newTask" placeholder="Add new task...">
+                    <button onclick="addTask()">+</button>
+                </div>
+            </div>
+        </div>
+        <div class="weather-widget">
+            <div class="weather-icon">☀️</div>
+            <div class="weather-temp">--°C</div>
+            <div class="weather-desc">Loading...</div>
+        </div>
     </div>
-    </div>
-    <script src="app.js"></script>
+    
+    <a href="index.html" class="back-btn">← Back</a>
+    
+    <script src="todo.js"></script>
 </body>
 </html>
